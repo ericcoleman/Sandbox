@@ -5,12 +5,12 @@
 
 <div hidden="@HasError" class="text-danger">@_errorMessage</div>
 
-<MatTextField @bind-Value="@_decoded" Label="Unencoded Text"></MatTextField> 
+<MatTextField @bind-Value="@_decoded" Label="Unencoded Text" FullWidth="true"></MatTextField> 
 <br/>
 <MatButton OnClick="@Encode" Raised="true">Encode</MatButton> 
 <br/> <br/>
 
-<MatTextField @bind-Value="_encoded" Label="Encoded Bits"></MatTextField> <br/>
+<MatTextField @bind-Value="_encoded" Label="Encoded Bits" FullWidth="true"></MatTextField> <br/>
 <MatButton OnClick="@Decode" Raised="true">Decode to Text</MatButton>
 
 @code
