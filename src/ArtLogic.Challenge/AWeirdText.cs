@@ -3,7 +3,7 @@ using System.Text;
 
 namespace ArtLogic.Challenge;
 
-public class AWeirdText
+public static class AWeirdText
 {
     public static IEnumerable<int> WeirdEncode(string input)
     {
