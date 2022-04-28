@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtLogic.Challenge", "src\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtLogic.Challenge.Test", "test\ArtLogic.Challenge.Test\ArtLogic.Challenge.Test.csproj", "{D1BA9843-59BD-4E82-BB26-53D825883365}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtLogic.Challenge.Blazor", "src\ArtLogic.Challenge.Blazor\ArtLogic.Challenge.Blazor.csproj", "{2FD50DF1-E350-41EB-BCD8-F71D0646A56A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1782EFB3-511C-4FF7-A70E-156DC5844DE2} = {3FE19885-4FB1-4EF4-B9B5-7CBB29BA0068}
 		{D1BA9843-59BD-4E82-BB26-53D825883365} = {90ABC6E9-5CDD-4A74-9DC4-60D8AFC5FBF7}
+		{2FD50DF1-E350-41EB-BCD8-F71D0646A56A} = {3FE19885-4FB1-4EF4-B9B5-7CBB29BA0068}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1782EFB3-511C-4FF7-A70E-156DC5844DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -32,5 +35,9 @@ Global
 		{D1BA9843-59BD-4E82-BB26-53D825883365}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1BA9843-59BD-4E82-BB26-53D825883365}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1BA9843-59BD-4E82-BB26-53D825883365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD50DF1-E350-41EB-BCD8-F71D0646A56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD50DF1-E350-41EB-BCD8-F71D0646A56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD50DF1-E350-41EB-BCD8-F71D0646A56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD50DF1-E350-41EB-BCD8-F71D0646A56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,42 @@
+﻿@page "/"
+@using System.Text.Json
+
+<PageTitle>Index</PageTitle>
+
+<div hidden="@HasError">@_errorMessage</div>
+Unencoded Text
+<MatTextField @bind-Value="@_unencoded" Label="Standard"></MatTextField>
+<input type="text" id="name" @bind="_unencoded" /> <br/>
+
+<button onclick="@Encode">Encode</button> <br/>
+<MatButton OnClick="@Encode" Raised="true">Encode</MatButton>
+Encoded Text
+<input type="text" id="encoded" @bind="_encoded" /> <br/>
+
+<button onclick="@Decode">Decode</button>
+@code
+{
+    private string _unencoded = string.Empty;
+    private string _encoded = string.Empty;
+    private string _errorMessage = string.Empty;
+    private bool HasError => string.IsNullOrEmpty(_errorMessage);
+
+    public void Encode()
+    {
+        if (string.IsNullOrEmpty(_unencoded))
+        {
+            _errorMessage = "Cannot encode an empty string";
+        }
+        else
+        {
+            _encoded = JsonSerializer.Serialize(AWeirdText.WeirdEncode(_unencoded));
+        }
+        
+        StateHasChanged();
+    }
+
+    public void Decode()
+    {
+        
+    }
+}
