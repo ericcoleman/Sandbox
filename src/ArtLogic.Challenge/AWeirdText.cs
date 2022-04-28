@@ -3,8 +3,16 @@ using System.Text;
 
 namespace ArtLogic.Challenge;
 
+/// <summary>
+/// Static class to encode and decode using the programming test requirements.
+/// </summary>
 public static class AWeirdText
 {
+    /// <summary>
+    /// Encode a string
+    /// </summary>
+    /// <param name="input">The string to encode</param>
+    /// <returns>The list of encoded integers</returns>
     public static IEnumerable<int> WeirdEncode(string input)
     {
         for (var i = 0; i < input.Length; i+=4)
@@ -16,6 +24,11 @@ public static class AWeirdText
         }
     }
 
+    /// <summary>
+    /// Decode a list of ints
+    /// </summary>
+    /// <param name="input">The ints to decode</param>
+    /// <returns>The decoded ascii string</returns>
     public static string WeirdDecode(IEnumerable<int> input)
     {
         return input.Aggregate(string.Empty, (current, i) => current + Decode(i));
