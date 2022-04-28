@@ -3,40 +3,54 @@
 
 <PageTitle>Index</PageTitle>
 
-<div hidden="@HasError">@_errorMessage</div>
-Unencoded Text
-<MatTextField @bind-Value="@_unencoded" Label="Standard"></MatTextField>
-<input type="text" id="name" @bind="_unencoded" /> <br/>
+<div hidden="@HasError" class="text-danger">@_errorMessage</div>
 
-<button onclick="@Encode">Encode</button> <br/>
-<MatButton OnClick="@Encode" Raised="true">Encode</MatButton>
-Encoded Text
-<input type="text" id="encoded" @bind="_encoded" /> <br/>
+<MatTextField @bind-Value="@_decoded" Label="Unencoded Text"></MatTextField> 
+<br/>
+<MatButton OnClick="@Encode" Raised="true">Encode</MatButton> 
+<br/> <br/>
 
-<button onclick="@Decode">Decode</button>
+<MatTextField @bind-Value="_encoded" Label="Encoded Bits"></MatTextField> <br/>
+<MatButton OnClick="@Decode" Raised="true">Decode to Text</MatButton>
+
 @code
 {
-    private string _unencoded = string.Empty;
+    private string _decoded = string.Empty;
     private string _encoded = string.Empty;
     private string _errorMessage = string.Empty;
     private bool HasError => string.IsNullOrEmpty(_errorMessage);
 
-    public void Encode()
+    private void Encode()
     {
-        if (string.IsNullOrEmpty(_unencoded))
+        _errorMessage = string.Empty;
+        if (string.IsNullOrEmpty(_decoded))
         {
             _errorMessage = "Cannot encode an empty string";
         }
         else
         {
-            _encoded = JsonSerializer.Serialize(AWeirdText.WeirdEncode(_unencoded));
+            _encoded = JsonSerializer.Serialize(
+                AWeirdText.WeirdEncode(_decoded));
         }
         
         StateHasChanged();
     }
 
-    public void Decode()
+    private void Decode()
     {
+        try
+        {
+            _errorMessage = string.Empty;
+
+            _decoded = _encoded.StartsWith('[') ? 
+                AWeirdText.WeirdDecode(JsonSerializer.Deserialize<List<int>>(_encoded)!) 
+                : AWeirdText.WeirdDecode(new[] { JsonSerializer.Deserialize<int>(_encoded) });
+        }
+        catch (JsonException)
+        {
+            _errorMessage = "Decoded was not in int array format -> [ x, y ]";
+        }
         
+        StateHasChanged();
     }
 }
