@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B10C48B5-878B-4B8D-8DE8-F4BB10C4A19E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0272A202-8790-40D1-AA97-F5EEB560A27A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayTime", "src\PayTime\PayTime.csproj", "{D22E9D17-597E-4537-9927-5BE311E51E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayTime.Tests", "test\PayTime.Tests\PayTime.Tests.csproj", "{35867DE4-502D-415D-8449-351A97AC5973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayTime.Tests.Integration", "test\PayTime.Tests.Integration\PayTime.Tests.Integration.csproj", "{5E29FD59-14FD-410C-AF6E-C6C56D1BC578}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D22E9D17-597E-4537-9927-5BE311E51E63} = {B10C48B5-878B-4B8D-8DE8-F4BB10C4A19E}
+		{35867DE4-502D-415D-8449-351A97AC5973} = {0272A202-8790-40D1-AA97-F5EEB560A27A}
+		{5E29FD59-14FD-410C-AF6E-C6C56D1BC578} = {0272A202-8790-40D1-AA97-F5EEB560A27A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D22E9D17-597E-4537-9927-5BE311E51E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22E9D17-597E-4537-9927-5BE311E51E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22E9D17-597E-4537-9927-5BE311E51E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22E9D17-597E-4537-9927-5BE311E51E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35867DE4-502D-415D-8449-351A97AC5973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35867DE4-502D-415D-8449-351A97AC5973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35867DE4-502D-415D-8449-351A97AC5973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35867DE4-502D-415D-8449-351A97AC5973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E29FD59-14FD-410C-AF6E-C6C56D1BC578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E29FD59-14FD-410C-AF6E-C6C56D1BC578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E29FD59-14FD-410C-AF6E-C6C56D1BC578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E29FD59-14FD-410C-AF6E-C6C56D1BC578}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
